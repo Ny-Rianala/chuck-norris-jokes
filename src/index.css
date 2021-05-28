@@ -1,1 +1,27 @@
+.chuck-norris {
+  max-width: 100%;
+  width: 439px;
+  height: 130px;
+  margin: 0 0 24px;
+  object-fit: contain;
+}
 
+.description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #34394f;
+  font-size: 18;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.selectStyle {
+  background: transparent;
+  width: 268px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+}

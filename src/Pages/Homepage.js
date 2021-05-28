@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import { axios } from 'axios'
+import image from '../../src/chuck-norris.png'
 
 const API = 'http://api.icndb.com/jokes/random'
 
@@ -19,12 +19,15 @@ function Homepage() {
 
   return (
     <div>
-      <p>{randomJokes.joke}</p>
-      <label for='categories'>Select Categories</label>
-      <select name='categories' id='categories'>
-        <option value='explicit'>Explicit</option>
-        <option value='nerdy'></option>
-      </select>
+      <img src={image} className='chuck-norris' alt='chuck norris' />
+      <p className='description'>{randomJokes.joke}</p>
+      <label htmlFor='categories'>Select Categories</label>
+      <div className='selectStyle'>
+        <select name='categories' id='categories'>
+          <option value='explicit'>Explicit</option>
+          <option value='nerdy'>Nerdy</option>
+        </select>
+      </div>
       <form>
         <label for='name'>Name:</label>
         <input type='text' id='name' name='name'></input>
@@ -44,13 +47,3 @@ export default Homepage
 //     categories: ['nerdy'],
 //   },
 // }
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const result = await axios('http://api.icndb.com/jokes/random')
-//       console.log(result)
-//       setRandomJokes(result.randomJokes)
-//     }
-
-//     fetchData()
-//   }, [])
