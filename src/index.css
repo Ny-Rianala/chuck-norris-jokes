@@ -1,3 +1,19 @@
+.container {
+  /* width: 555px; */
+  /* height: 704px; */
+  /* padding: 48px 58px 72px;
+   */
+  padding: 51px 17px 56px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
 .chuck-norris {
   max-width: 100%;
   width: 439px;
@@ -12,6 +28,8 @@
   font-size: 18;
   font-weight: 600;
   font-style: italic;
+  margin: 0;
+  padding-bottom: ;
 }
 
 .selectStyle {
@@ -24,4 +42,77 @@
   border-radius: 0;
   height: 34px;
   -webkit-appearance: none;
+}
+
+.input {
+  background-color: #ffff;
+  padding-top: 16px;
+  padding-left: 40px;
+  padding-bottom: 12px;
+  padding-right: 40px;
+  border: solid 1px #c4c4c4;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: -0.52px;
+  text-align: left;
+  color: #c4c4c4;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.option {
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  padding-right: 209px;
+  border: solid 1px #c4c4c4;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: -0.52px;
+  text-align: left;
+  color: #c4c4c4;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+.button {
+  background-color: #34394f;
+  border: none;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 400px;
+    max-width: 40%;
+    padding: 51px 17px 56px;
+    background-attachment: rgb(74, 74, 94);
+  }
+  .input {
+    padding-top: 16px;
+    padding-left: 100px;
+    padding-bottom: 12px;
+    padding-right: 100px;
+  }
 }
