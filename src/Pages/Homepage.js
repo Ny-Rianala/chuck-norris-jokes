@@ -3,20 +3,16 @@ import image from '../../src/chuck-norris.png'
 // import { useParams } from 'react-router-dom'
 
 const API = 'http://api.icndb.com/jokes/random?limitTo=[nerdy,explicit]'
-// const API_BY_NAME =
-//   'http://api.icndb.com/jokes/random?firstName=John&lastName=Doe'
 
 const getImpersonatedJokeUrl = (firstName = '', lastName = '') => {
   return `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`
 }
 
-console.log(getImpersonatedJokeUrl)
-
 function Homepage() {
   const [randomJokes, setRandomJokes] = useState([])
+  const [nameForImpersonation, setNameForImpersonation] = useState('')
   // const [selectedValue, setSelectedValue] = useState(randomJokes[0])
   // const [categories, setCategories] = useState([])
-  const [nameForImpersonation, setNameForImpersonation] = useState('')
 
   const getRandomJokes = async () => {
     let url = API
@@ -32,15 +28,6 @@ function Homepage() {
     console.log(listOfJokes.value)
     setRandomJokes(listOfJokes.value)
   }
-
-  // const getCategories = async () => {
-  //   const res = await fetch(API_BY_NAME)
-  //   const listOfCategories = await res.json()
-  //   console.log(listOfCategories)
-  //   setSelectedValue(listOfCategories)
-  // }
-
-  // const [selectedCategory, setSelectedCategory] = useState(randomJokes)
 
   useEffect(() => {
     getRandomJokes()
@@ -68,7 +55,6 @@ function Homepage() {
   const handleSelectionChange = (e) => {
     //  to do category changes
   }
-  // console.log(handleChange)
 
   return (
     <div>
@@ -90,6 +76,14 @@ function Homepage() {
         <button onClick={getRandomJokes} className='button'>
           Draw a random chuck norris jokes
         </button>
+        <div className='buttonContainer'>
+          <div className='counterButton'>
+            <button>+</button>
+            <h1 className='count'>0</h1>
+            <button>-</button>
+          </div>
+          <button className='saveButton'>Save jokes</button>
+        </div>
       </div>
     </div>
   )
