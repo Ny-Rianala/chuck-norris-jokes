@@ -9,7 +9,9 @@ const getImpersonatedJokeUrl = (firstName = '', lastName = '') => {
 
 function Homepage() {
   const [randomJokes, setRandomJokes] = useState([])
-  const [nameForImpersonation, setNameForImpersonation] = useState('')
+  const [nameForImpersonation, setNameForImpersonation] = useState(
+    'Impersonate Chuck Norris'
+  )
 
   const getRandomJokes = async () => {
     let url = API

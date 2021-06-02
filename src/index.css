@@ -21,7 +21,7 @@
 .description {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #34394f;
-  font-size: 18;
+  font-size: 18px;
   font-weight: 600;
   font-style: italic;
   margin: 0;
@@ -42,7 +42,7 @@
 
 .input {
   background-color: #ffff;
-  padding-top: 25px;
+  padding-top: 12px;
   padding-left: 40px;
   padding-bottom: 12px;
   padding-right: 25px;
@@ -61,10 +61,10 @@
 }
 
 .option {
-  padding-top: 25px;
+  padding-top: 15px;
   padding-left: 20px;
-  padding-bottom: 25px;
-  padding-right: 209px;
+  padding-bottom: 18px;
+  padding-right: 141px;
   border: solid 1px #c4c4c4;
   font-family: Inter;
   font-size: 16px;
@@ -106,11 +106,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 11px;
-  padding-left: 14px;
+  padding-left: -12px;
   padding-bottom: 11px;
   padding-right: 11px;
   background-color: #f9f9f9;
-  width: 146px;
   height: 58px;
 }
 
@@ -121,9 +120,9 @@
 
 .saveButton {
   padding-top: 11px;
-  padding-left: 84px;
+  padding-left: 64px;
+  padding-right: 49px;
   padding-bottom: 11px;
-  padding-right: 90px;
   border: none;
   background-color: #f5f6f8;
   color: #34394f;
