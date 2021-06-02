@@ -156,4 +156,17 @@
     padding-bottom: 12px;
     padding-right: 100px;
   }
+  .saveButton {
+    padding-top: 16px;
+    padding-left: 100px;
+    padding-bottom: 12px;
+    padding-right: 100px;
+  }
+  .counterButton {
+    padding-top: 16px;
+    padding-left: 43px;
+    padding-bottom: 12px;
+    padding-right: 40px;
+    margin-right: 20px;
+  }
 }
