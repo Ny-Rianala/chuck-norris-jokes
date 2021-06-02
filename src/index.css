@@ -1,8 +1,4 @@
 .container {
-  /* width: 555px; */
-  /* height: 704px; */
-  /* padding: 48px 58px 72px;
-   */
   padding: 51px 17px 56px;
   border-radius: 8px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
@@ -125,7 +121,7 @@
 
 .saveButton {
   padding-top: 11px;
-  padding-left: 100px;
+  padding-left: 84px;
   padding-bottom: 11px;
   padding-right: 90px;
   border: none;
@@ -137,11 +133,11 @@
 
 .counterButton button {
   border: none;
-  /* background-color: none; */
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border-color: #34394f;
+  font-size: 28px;
 }
 
 @media (min-width: 1000px) {

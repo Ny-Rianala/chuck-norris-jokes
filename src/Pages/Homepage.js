@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import image from '../../src/chuck-norris.png'
-// import { useParams } from 'react-router-dom'
 
 const API = 'http://api.icndb.com/jokes/random?limitTo=[nerdy,explicit]'
 
@@ -11,8 +10,6 @@ const getImpersonatedJokeUrl = (firstName = '', lastName = '') => {
 function Homepage() {
   const [randomJokes, setRandomJokes] = useState([])
   const [nameForImpersonation, setNameForImpersonation] = useState('')
-  // const [selectedValue, setSelectedValue] = useState(randomJokes[0])
-  // const [categories, setCategories] = useState([])
 
   const getRandomJokes = async () => {
     let url = API
@@ -21,8 +18,6 @@ function Homepage() {
       console.log(firstName, lastName)
       url = getImpersonatedJokeUrl(firstName, lastName)
     }
-    console.log(url)
-    //check if we have firstname and lastname
     const res = await fetch(url)
     const listOfJokes = await res.json()
     console.log(listOfJokes.value)
@@ -32,14 +27,10 @@ function Homepage() {
   useEffect(() => {
     getRandomJokes()
   }, [])
+
   useEffect(() => {
     setNameForImpersonation()
   }, [])
-
-  // const category = () => {
-  //   randomJokes.filter((item) => item.categories[1] === selectedValue)
-  // }
-  // console.log(category)
 
   const handleInputChange = (e) => {
     e.preventDefault()
@@ -50,19 +41,16 @@ function Homepage() {
     e.preventDefault()
     getRandomJokes()
   }
-  console.log(`The name changed into ${nameForImpersonation}`)
-
-  const handleSelectionChange = (e) => {
-    //  to do category changes
-  }
 
   return (
     <div>
       <img src={image} className='chuck-norris' alt='chuck norris' />
       <p className='description'>{randomJokes.joke}</p>
       <div className='subcontainer'>
-        <select className='option' onChange={handleSelectionChange}>
-          {/* <option value={selectedValue}>{selectedValue}</option> */}
+        <select className='option'>
+          <option>Select category</option>
+          <option>Nerdy</option>
+          <option>Explicit</option>
         </select>
         <form onSubmit={handleSubmit}>
           <input
